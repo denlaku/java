@@ -24,12 +24,19 @@ public class TestBeans {
 		Class<Person> clazz = Person.class;
 		try {
 			PropertyDescriptor pd = new PropertyDescriptor("id", clazz);
-			pd.getReadMethod();
+			Method readMethod = pd.getReadMethod();
+			System.out.println(readMethod.invoke(new Person()));
 			System.out.println(pd.getDisplayName());
 			System.out.println(pd.getName());
 			System.out.println(pd.getShortDescription());
 			System.out.println(pd.getPropertyType());
 		} catch (IntrospectionException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		} catch (IllegalArgumentException e) {
+			e.printStackTrace();
+		} catch (InvocationTargetException e) {
 			e.printStackTrace();
 		}
 	}
@@ -138,13 +145,10 @@ public class TestBeans {
 		} catch (IntrospectionException e) {
 			e.printStackTrace();
 		} catch (IllegalAccessException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IllegalArgumentException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (InvocationTargetException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

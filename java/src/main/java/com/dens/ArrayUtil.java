@@ -6,6 +6,7 @@ public abstract class ArrayUtil {
 
 	/**
 	 * 根据指定的类型 创建数组
+	 * 
 	 * @param cls
 	 * @param len
 	 * @return

@@ -27,7 +27,6 @@ public class TestClass {
 			Double calculate = new TestClass().calculate("1000 + 1000");
 			System.out.println(calculate);
 		} catch (URISyntaxException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
