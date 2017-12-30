@@ -1,4 +1,4 @@
-package com.denlaku.jdk8.newapi;
+package com.denlaku.jdk8.api;
 
 import java.util.StringJoiner;
 import java.util.StringTokenizer;

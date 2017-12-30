@@ -1,4 +1,4 @@
-package com.denlaku.jdk7;
+package com.denlaku.jdk7.api;
 
 import java.io.File;
 import java.io.IOException;
