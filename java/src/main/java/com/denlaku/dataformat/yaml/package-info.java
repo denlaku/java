@@ -8,4 +8,4 @@
  *   <version>1.13</version>
  * </dependency>
  */
-package com.denlaku.datainterchange.yaml;
+package com.denlaku.dataformat.yaml;

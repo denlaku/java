@@ -1,4 +1,4 @@
-package com.denlaku.datainterchange.json;
+package com.denlaku.dataformat.json;
 
 import java.util.ArrayList;
 import java.util.List;

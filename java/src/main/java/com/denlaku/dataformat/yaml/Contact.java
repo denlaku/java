@@ -1,4 +1,4 @@
-package com.denlaku.datainterchange.yaml;
+package com.denlaku.dataformat.yaml;
 
 import lombok.Data;
 

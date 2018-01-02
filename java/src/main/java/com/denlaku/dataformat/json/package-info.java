@@ -14,4 +14,4 @@
  *   <version>1.2.41</version>
  * </dependency>
  */
-package com.denlaku.datainterchange.json;
+package com.denlaku.dataformat.json;
