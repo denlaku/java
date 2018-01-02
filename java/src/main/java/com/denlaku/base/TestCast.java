@@ -10,7 +10,7 @@ public class TestCast {
 		long start = System.currentTimeMillis();
 //		int max = Integer.MAX_VALUE;
 		for (int i = 0; i < Integer.MAX_VALUE; i++) {
-			sum += 1;
+			sum += i;
 		}
 		long end = System.currentTimeMillis();
 		System.out.println(end - start);
