@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class ServiceCenter implements Server {
+public class ServerCenter implements Server {
 	private static ExecutorService executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
 	private static final HashMap<String, Class<?>> serviceRegistry = new HashMap<>();
@@ -20,8 +20,8 @@ public class ServiceCenter implements Server {
 
 	private static int port;
 
-	public ServiceCenter(int port) {
-		ServiceCenter.port = port;
+	public ServerCenter(int port) {
+		ServerCenter.port = port;
 	}
 
 	public void stop() {
