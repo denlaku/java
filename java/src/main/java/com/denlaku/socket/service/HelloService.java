@@ -1,7 +1,9 @@
 package com.denlaku.socket.service;
 
+import com.denlaku.socket.vo.SocketVO;
+
 public interface HelloService {
 
-	String sayHi(String name);
+	SocketVO findById(Long id);
 
 }
