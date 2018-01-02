@@ -31,11 +31,12 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.xml.sax.SAXException;
 
-import com.denlaku.Constant;
+import com.denlaku.j2ee.xml.vo.Address;
+import com.denlaku.j2ee.xml.vo.Person;
 
 public class TestClass {
 
-	private static final String PATH = Constant.TEMP + "xmls\\person.xml";
+	private static final String PATH = "D:\\denlaku.git\\java-training\\java\\temp\\xml\\person.xml";
 
 	
 	@Test

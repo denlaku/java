@@ -1,13 +1,7 @@
-package com.denlaku.j2ee.xml;
+package com.denlaku.j2ee.xml.dom4j;
 
-import java.beans.BeanInfo;
-import java.beans.IntrospectionException;
-import java.beans.Introspector;
-import java.beans.PropertyDescriptor;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
@@ -20,35 +14,7 @@ import org.junit.Test;
 
 public class Dom4JTestClass {
 
-	private static final String PATH = "C:\\Users\\User\\Desktop\\xmls\\person.xml";
-
-	@Test
-	public void test03() {
-
-		try {
-			BeanInfo beanInfo = Introspector.getBeanInfo(Person.class, Introspector.IGNORE_ALL_BEANINFO);
-			PropertyDescriptor[] propertyDescriptors = beanInfo.getPropertyDescriptors();
-
-			Person person = new Person(100L, "KKK", null);
-			for (PropertyDescriptor propertyDescriptor : propertyDescriptors) {
-				Method readMethod = propertyDescriptor.getReadMethod();
-				if (readMethod != null) {
-					Object invoke = readMethod.invoke(person);
-					System.out.println(propertyDescriptor.getName());
-					System.out.println(readMethod.getName() + " : " + invoke);
-				}
-			}
-		} catch (IntrospectionException e) {
-			e.printStackTrace();
-		} catch (IllegalAccessException e) {
-			e.printStackTrace();
-		} catch (IllegalArgumentException e) {
-			e.printStackTrace();
-		} catch (InvocationTargetException e) {
-			e.printStackTrace();
-		}
-
-	}
+	private static final String PATH = "D:\\denlaku.git\\java-training\\java\\temp\\xml\\person.xml";
 
 	@Test
 	public void test02() {

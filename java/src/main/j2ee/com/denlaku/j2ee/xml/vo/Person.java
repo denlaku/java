@@ -1,4 +1,4 @@
-package com.denlaku.j2ee.xml;
+package com.denlaku.j2ee.xml.vo;
 
 import java.io.Serializable;
 

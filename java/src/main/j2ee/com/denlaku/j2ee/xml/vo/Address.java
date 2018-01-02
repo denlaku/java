@@ -1,8 +1,10 @@
-package com.denlaku.j2ee.xml;
+package com.denlaku.j2ee.xml.vo;
 
 import java.io.Serializable;
 
 import javax.xml.bind.annotation.XmlType;
+
+import com.denlaku.j2ee.xml.IAddress;
 
 @XmlType(propOrder = { "name", "code" })
 public class Address implements Serializable, IAddress {

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<person>
+    <id>100</id>
+    <name>KKK======</name>
+    <address>
+        <name>ShenZhen</name>
+        <code>SZ</code>
+    </address>
+</person>
