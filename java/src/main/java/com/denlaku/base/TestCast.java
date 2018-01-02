@@ -1,8 +1,8 @@
-package com.denlaku.test;
+package com.denlaku.base;
 
 import org.junit.Test;
 
-public class TestClass1 {
+public class TestCast {
 
 	@Test
 	public void test02() {

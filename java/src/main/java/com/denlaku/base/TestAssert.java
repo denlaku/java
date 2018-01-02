@@ -10,6 +10,6 @@ public class TestAssert {
 	}
 	
 	public void run(int i) {
-		assert i > 10 : "i---";
+		assert i < 10 : "i---";
 	}
 }
