@@ -6,8 +6,18 @@ import java.io.FileOutputStream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
+import com.denlaku.Constant;
+
 public abstract class CompressZip {
-	private CompressZip() {
+
+	public static void main(String[] temp) {
+		try {
+			String inputFileName = Constant.TEMP + "javazip/input";
+			String zipFileName = Constant.TEMP + "javazip/output/test.zip";
+			CompressZip.zip(inputFileName, zipFileName);
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
 	}
 
 	public static void zip(String inputFilePath, String zipFileName) throws Exception {
@@ -32,22 +42,15 @@ public abstract class CompressZip {
 		} else {
 			out.putNextEntry(new ZipEntry(base));
 			FileInputStream in = new FileInputStream(f);
-			int b;
+			int buf;
 			System.out.println(base);
-			while ((b = in.read()) != -1) {
-				out.write(b);
+			while ((buf = in.read()) != -1) {
+				out.write(buf);
 			}
 			in.close();
 		}
 	}
 
-	public static void main(String[] temp) {
-		try {
-			String inputFileName = "C:\\Users\\User\\Desktop\\javazip";
-			String zipFileName = "C:\\Users\\User\\Desktop\\test.zip";
-			CompressZip.zip(inputFileName, zipFileName);
-		} catch (Exception ex) {
-			ex.printStackTrace();
-		}
+	private CompressZip() {
 	}
 }

@@ -9,7 +9,7 @@ import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 
-public class BeanUtil {
+public abstract class BeanUtil {
 
 	public static <T> Map<String, ? extends Object> beanPropMap(T t) {
 		Map<String, Object> map = new HashMap<>();

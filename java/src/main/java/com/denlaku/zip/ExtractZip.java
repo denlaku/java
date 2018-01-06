@@ -4,22 +4,29 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
-public class EctractZip {
+import com.denlaku.Constant;
+
+public abstract class ExtractZip {
 
 	public static void main(String[] args) {
-		// EctractZip z = new EctractZip();
-		String outputDest = "C:\\Users\\User\\Desktop\\javazip\\";
-		String zipFileName = "C:\\Users\\User\\Desktop\\test.zip";
-		ArrayList<String> a = EctractZip.ectract(zipFileName, outputDest);
+		String outputDest = Constant.TEMP + "javazip/input/";
+		String zipFileName = Constant.TEMP + "javazip/output/test.zip";
+		ArrayList<String> a = ExtractZip.unzip(zipFileName, outputDest);
 		for (String s : a) {
 			System.out.println(s);
 		}
 	}
 	
-	public static ArrayList<String> ectract(File zipFile, String destPath) {
+	public static ArrayList<String> unzip(File zipFile, String destPath) {
+		Objects.requireNonNull(destPath);
+		String tempPath = destPath;
+		if (!tempPath.endsWith("/")) {
+			tempPath += "/";
+		}
 		ArrayList<String> allFileName = new ArrayList<String>();
 		try {
 			FileInputStream fis = new FileInputStream(zipFile);
@@ -29,19 +36,19 @@ public class EctractZip {
 			while ((ze = zis.getNextEntry()) != null) {
 				System.out.println("ZipEntryName: " + ze.getName());
 				File zfile = new File(destPath + ze.getName());
-				File fpath = new File(zfile.getParentFile().getPath());
 				if (ze.isDirectory()) {
 					if (!zfile.exists())
 						zfile.mkdirs();
 					zis.closeEntry();
 				} else {
+					File fpath = new File(zfile.getParentFile().getPath());
 					if (!fpath.exists())
 						fpath.mkdirs();
 					FileOutputStream fos = new FileOutputStream(zfile);
-					int i;
+					int size;
 					allFileName.add(zfile.getAbsolutePath());
-					while ((i = zis.read(ch)) != -1)
-						fos.write(ch, 0, i);
+					while ((size = zis.read(ch)) != -1)
+						fos.write(ch, 0, size);
 					zis.closeEntry();
 					fos.close();
 				}
@@ -54,7 +61,9 @@ public class EctractZip {
 		return allFileName;
 	}
 
-	public static ArrayList<String> ectract(String zipFileName, String destPath) {
-		return ectract(new File(zipFileName), destPath);
+	public static ArrayList<String> unzip(String zipFileName, String destPath) {
+		return unzip(new File(zipFileName), destPath);
 	}
+	
+	private ExtractZip() {}
 }
