@@ -34,6 +34,8 @@ public class TestClass {
 			Object readObject = ois.readObject();
 			System.out.println(readObject);
 			
+			System.out.println(instance == readObject);
+			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

@@ -19,7 +19,7 @@ import java.time.ZoneId;
 import org.junit.Test;
 
 public class TestClass {
-	
+
 	@Test
 	public void test09() {
 		LocalDateTime now = LocalDateTime.now();
@@ -31,7 +31,6 @@ public class TestClass {
 		ZoneId of = ZoneId.of("Australia/Darwin");
 		System.out.println(of);
 	}
-
 
 	@Test
 	public void test03() {
@@ -82,18 +81,22 @@ public class TestClass {
 
 	@Test
 	public void test01() {
-		String i = "";
+		// String i = "";
 		// byte i = 1;
 		// short i = 1;
 		// int i = 0;
 		// Byte i = 1;
 		// Short i = 1;
-		// Integer i = 1;
-
+		Integer i = 1;
 		// char i = 'A';
 		// Character i = 1;
+		// Color i = Color.RED;
 		switch (i) {
 
 		}
+	}
+
+	enum Color {
+		RED
 	}
 }

@@ -10,7 +10,7 @@
 	<classpathentry kind="src" path="src/main/thread"/>
 	<classpathentry kind="src" path="src/main/jdk"/>
 	<classpathentry kind="src" path="src/main/jvm"/>
-	<classpathentry kind="src" path="src/main/nio"/>
+	<classpathentry kind="src" path="src/main/net"/>
 	<classpathentry kind="src" path="src/main/design"/>
 	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
 		<attributes>
